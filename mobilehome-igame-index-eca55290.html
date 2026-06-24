@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 再访指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafbfc;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.7;
+      color: #1e2b3c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1.25rem 4rem 1.25rem;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* hero 区域 – 极简主视觉 */
+    .hero {
+      margin-top: 1rem;
+      margin-bottom: 2.8rem;
+      border-bottom: 1px solid #e6edf2;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+      color: #162b3a;
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #506c80;
+      max-width: 32em;
+      margin-top: 0.3rem;
+    }
+
+    /* 通用标题 */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 520;
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1d3344;
+    }
+
+    .section-title::before {
+      content: "⸻";
+      font-weight: 300;
+      color: #b2c9d9;
+      margin-right: 0.1rem;
+    }
+
+    /* 卡片网格 – 用途卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .card-item {
+      background: white;
+      border-radius: 14px;
+      padding: 1.6rem 1.5rem 1.5rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eef3f7;
+      transition: box-shadow 0.2s;
+    }
+
+    .card-item:hover {
+      box-shadow: 0 8px 20px rgba(0, 20, 40, 0.06);
+    }
+
+    .card-item h3 {
+      font-size: 1.1rem;
+      font-weight: 540;
+      margin-bottom: 0.6rem;
+      color: #1f3a4b;
+    }
+
+    .card-item p {
+      font-size: 0.94rem;
+      color: #3d5b6f;
+      line-height: 1.6;
+    }
+
+    .card-item .icon-placeholder {
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-bottom: 0.3rem;
+      color: #3a6b87;
+    }
+
+    /* 适合人群 – 简洁列表 */
+    .audience-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1rem;
+      margin-bottom: 3rem;
+      background: #ffffff;
+      padding: 1.25rem 1.5rem;
+      border-radius: 20px;
+      border: 1px solid #e6edf2;
+    }
+
+    .audience-tag {
+      background: #ecf3f9;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #1b3b4f;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    /* 自然链接段落 + 提示内容 */
+    .reading-block {
+      margin-bottom: 2.8rem;
+    }
+
+    .reading-block p {
+      margin-bottom: 1.4rem;
+      font-size: 1rem;
+      color: #1d3344;
+    }
+
+    .reading-block a {
+      color: #19647e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b6d2e4;
+      font-weight: 500;
+      transition: text-decoration-color 0.15s;
+    }
+
+    .reading-block a:hover {
+      text-decoration-color: #19647e;
+    }
+
+    /* FAQ 摘要 – 极简 */
+    .faq-mini {
+      margin-top: 2.2rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #e0e9f0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.1rem;
+    }
+
+    .faq-q {
+      font-weight: 510;
+      color: #1e3a4d;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      color: #3b5e74;
+      font-size: 0.9rem;
+    }
+
+    .faq-a a {
+      color: #19647e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dce6ee;
+      margin: 2.2rem 0 1.4rem 0;
+    }
+
+    .note {
+      color: #59768a;
+      font-size: 0.9rem;
+      background: #f1f7fb;
+      padding: 0.8rem 1.2rem;
+      border-radius: 24px;
+      margin-top: 2rem;
+      display: inline-block;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.5rem 1rem 3rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .card-item {
+        padding: 1.2rem 1.1rem;
+      }
+
+      .audience-list {
+        padding: 1rem 1.1rem;
+      }
+
+      .section-title {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 主视觉 -->
+    <div class="hero">
+      <h1>爱游戏 · 再次收藏</h1>
+      <div class="subhead">
+        一个集中了游戏信息与浏览入口的页面，值得放进书签，随时回访。
+      </div>
+    </div>
+
+    <!-- 用途卡片：为什么保留这个站 -->
+    <div class="section-title">用途卡片</div>
+    <div class="card-grid">
+      <div class="card-item">
+        <div class="icon-placeholder">🎮</div>
+        <h3>快速跳转</h3>
+        <p>聚合多个游戏相关链接，省去重复搜索的时间。每次打开都能直接进入感兴趣的区块。</p>
+      </div>
+      <div class="card-item">
+        <div class="icon-placeholder">📌</div>
+        <h3>持续收藏</h3>
+        <p>适合将页面固定到浏览器标签栏，日后有新内容或更新时，打开即见。</p>
+      </div>
+      <div class="card-item">
+        <div class="icon-placeholder">🗂️</div>
+        <h3>内容索引</h3>
+        <p>页面结构清晰，分类明确，帮助快速定位自己关心的游戏信息或动态。</p>
+      </div>
+      <div class="card-item">
+        <div class="icon-placeholder">🔁</div>
+        <h3>重复访问</h3>
+        <p>不少用户习惯每周回来浏览，页面稳定，适合作为固定信息源使用。</p>
+      </div>
+    </div>
+
+    <!-- 适合人群 -->
+    <div class="section-title">适合人群</div>
+    <div class="audience-list">
+      <span class="audience-tag">偶尔玩游戏的上班族</span>
+      <span class="audience-tag">学生玩家</span>
+      <span class="audience-tag">怀旧游戏爱好者</span>
+      <span class="audience-tag">想集中浏览的用户</span>
+      <span class="audience-tag">收藏控</span>
+      <span class="audience-tag">轻度玩家</span>
+    </div>
+
+    <!-- 自然链接段落 + 再次访问的语境 -->
+    <div class="reading-block">
+      <p>
+        如果你之前来过这里，或许已经注意到页面在逐渐调整结构，让信息更容易浏览。
+        无论你是因为某个游戏专题而来，还是只是想随手看看，将 <a href="https://mobilehome-igame.com">爱游戏</a> 
+        加入书签都能省去下次寻找的麻烦。页面本身不收集多余信息，仅作为整理过的索引存在。
+      </p>
+      <p>
+        站内没有复杂的跳转逻辑，打开就是一个干净的总览。对经常关注游戏动态的人来说，
+        定期回来扫一眼足够。如果你还没有收藏，可以试试把 <a href="https://mobilehome-igame.com">爱游戏</a> 
+        放在浏览器的书签栏或者手机主屏幕，下次需要时直接点开。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="section-title">常见问题 · 摘要</div>
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">这个页面会频繁变化吗？</div>
+        <div class="faq-a">整体结构保持稳定，内容会随游戏信息更新做小幅调整，不会突然大变样。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否需要注册或登录？</div>
+        <div class="faq-a">完全不需要。页面是公开的信息索引，直接打开即可浏览。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">最适合用什么设备看？</div>
+        <div class="faq-a">手机、平板、电脑都适合，页面针对窄屏优化过，阅读体验一致。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何快速回到这个页面？</div>
+        <div class="faq-a">收藏 <a href="https://mobilehome-igame.com">爱游戏</a> 到浏览器书签，或保存到手机桌面。</div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="note">
+      ⚡ 页面内容仅供信息参考，不构成任何形式的推荐或引导。保持书签，常回来看看。
+    </div>
+  </div>
+</body>
+</html>

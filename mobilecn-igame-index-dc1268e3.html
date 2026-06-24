@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解爱游戏 · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f4f6f8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2d3e50;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 820px;
+            width: 100%;
+        }
+        /* hero 开场区 */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.5rem 2.2rem 2rem 2.2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: box-shadow 0.2s;
+        }
+        .hero:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+        }
+        .hero .short-line {
+            font-size: 1.8rem;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            color: #1a2b3c;
+            margin-bottom: 0.35rem;
+            border-left: 4px solid #7f9db9;
+            padding-left: 1rem;
+        }
+        .hero .sub {
+            color: #5b6f83;
+            font-size: 1rem;
+            margin: 0.6rem 0 0 0;
+            background: #f0f3f7;
+            display: inline-block;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-weight: 400;
+        }
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid #e6ecf1;
+            box-shadow: 0 4px 12px rgba(0, 20, 30, 0.02);
+            transition: box-shadow 0.15s;
+        }
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e3142;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e1e8ef;
+            padding-bottom: 0.4rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c4053;
+            margin: 1.1rem 0 0.4rem 0;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 0.2rem;
+        }
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 1.6rem;
+            position: relative;
+            border-bottom: 1px solid #eff2f6;
+            color: #314759;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #6f8ba3;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .soft-link {
+            color: #3f6b8c;
+            text-decoration: none;
+            border-bottom: 1px dashed #b6cbd9;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .soft-link:hover {
+            color: #1d4b68;
+            border-bottom-color: #1d4b68;
+        }
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+        .faq-item {
+            background: #f9fafc;
+            border-radius: 16px;
+            padding: 1rem 1.4rem;
+            border-left: 3px solid #bcccdb;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #1a2f40;
+        }
+        .faq-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #415a6f;
+        }
+        .ending-note {
+            margin-top: 1.4rem;
+            background: #edf2f7;
+            border-radius: 40px;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #2f4255;
+            border: 1px solid #d9e1ea;
+        }
+        .ending-note a {
+            font-weight: 500;
+        }
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .hero, .card {
+                padding: 1.6rem 1.2rem;
+                border-radius: 20px;
+            }
+            .hero .short-line {
+                font-size: 1.5rem;
+                padding-left: 0.7rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="hero">
+        <div class="short-line">一个关于游戏的细腻角落</div>
+        <div class="sub">站点 · 介绍与可信说明</div>
+    </div>
+
+    <!-- 承接段落 -->
+    <div class="card">
+        <p>如果你曾好奇，一个专注于移动游戏体验的站点该以何种面貌存在，那么 <a href="https://mobilecn-igame.com" class="soft-link">爱游戏</a> 或许就是答案。它并非一个喧闹的资讯合集，而更像一座经过梳理的档案室——从游戏机制到界面交互，从题材脉络到社区氛围，都以克制的笔触逐一呈现。</p>
+        <p>站点内容围绕“可理解”与“可追溯”展开。每一篇介绍都力求在有限篇幅内勾勒出游戏的核心轮廓，不堆砌空洞的赞美，也不依赖夸张的标签。对于希望快速了解某款作品、或寻找同类题材的玩家来说，这种简洁的梳理方式往往比碎片化推荐更有效。</p>
+    </div>
+
+    <!-- 特点列表 用卡片 -->
+    <div class="card">
+        <h2>内容组织上的几个特点</h2>
+        <ul class="feature-list">
+            <li><strong>分类与标签系统</strong> —— 按游戏类型、题材风格、操作模式等多维度划分，便于横向对比与探索</li>
+            <li><strong>描述中性且结构一致</strong> —— 每款游戏均包含背景设定、核心玩法、视觉风格等固定段落，降低信息噪音</li>
+            <li><strong>版本与平台标注</strong> —— 明确收录版本及适用平台，避免玩家下载到过时或不适配的版本</li>
+            <li><strong>引用外部可信源</strong> —— 部分数据与评价取自公开评测或开发者访谈，并在页面内标明索引</li>
+        </ul>
+        <p style="margin-top: 0.8rem; color: #4d657b;">这些组织方式并非独创，但在移动游戏领域，能长期保持统一标准的内容站点并不多见。<a href="https://mobilecn-igame.com" class="soft-link">爱游戏</a> 在这一方向上做了持续积累。</p>
+    </div>
+
+    <!-- 场景 + 可信说明 混合卡片 -->
+    <div class="card">
+        <h2>适合哪些场景查阅</h2>
+        <p>当你想了解一款新上架的手游但不想看完十分钟实况；当你在几款相似作品间犹豫，需要一份客观的对比框架；或者只是单纯想回顾某个经典系列的演变——站点的结构化描述都能提供帮助。</p>
+        <p>可信度方面，站内内容不包含未经标注的推测或主观排名。每篇介绍末尾会标明最后更新时间，且保留修改记录摘要。若发现明显事实错误，也可通过站点提供的反馈渠道进行指正。这种透明度在个人或小型团队运营的站点中较为少见，也是 <a href="https://mobilecn-igame.com" class="soft-link">爱游戏</a> 值得留意的一点。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="card">
+        <h2>常见疑问摘要</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <strong>收录标准是什么？</strong>
+                <p>主要收录在移动平台（iOS / Android）有过正式上架、且拥有一定玩家基础或独特设计的中英文游戏。不收录未完成或明显抄袭类作品。</p>
+            </div>
+            <div class="faq-item">
+                <strong>更新频率如何？</strong>
+                <p>根据游戏发布节奏不定期更新，通常每月至少新增 3–5 款游戏介绍，并复核已有页面的失效链接或版本信息。</p>
+            </div>
+            <div class="faq-item">
+                <strong>站内是否有下载链接？</strong>
+                <p>不直接提供安装包。页面中的链接会指向官方应用商店、Steam 或开发者官网，以保障获取途径的合法与安全。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="ending-note">
+        <span>如果你恰好也在寻找一个安静、可信的游戏参考坐标，不妨将 <a href="https://mobilecn-igame.com" class="soft-link">爱游戏</a> 加入书签。也许某一次随手翻阅，就能遇到让你驻足的片段。</span>
+    </div>
+
+</div>
+</body>
+</html>
